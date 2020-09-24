@@ -20,21 +20,27 @@ h1, .section-header{
     font-weight: bold;
 }
 
-section{
+.row{
+    margin: 0 10px 0 10px;
+}
+section{ 
+    float: left;
+}
+.content {
+    margin: 10px;
     background-color: #F1F3F4;
     border: 3px solid #B4B4B4;
     padding: 15px;
     padding-top: 55px;
-    margin: 20px;
-    position: relative;    
+    position: relative;
 }
 
-section > div {   
+p {   
     position: absolute;
     top: -3px;
     right: -3px;
     border: 3px solid #B4B4B4;
-    padding: 10px;
+    padding: 10px; 
     width: 160px;
     text-align: center;    
 }
@@ -53,33 +59,22 @@ section > div {
 }
 
 @media (max-width: 767px){
-    .mobile-column{
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
+    .col-sm-12{
+        width: 100%;
     }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-    .tablet-column{
-        width: 46.25%;
-        float: left;
-        margin-left: 2.5%;
-        margin-right: 0px;
-        margin-top: 2.5%;
-        margin-bottom: 0px;
+@media (min-width: 768px) and (max-width: 991px){
+    .col-md-6{
+        width: 50%;
     }
-
-    .tablet-column:nth-child(3){
-        width: 95%;        
+    .col-md-12{
+        width: 100%;
     }
 }
 
 @media (min-width: 992px){
-    .desktop-column{
-        width: 30%;
-        float: left;
-        margin-left: 2.5%;
-        margin-right: 0px;
+    .col-lg-4{
+        width: 33.33%;
     }
 }
